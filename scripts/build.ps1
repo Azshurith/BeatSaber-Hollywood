@@ -31,7 +31,7 @@ if (($clean.IsPresent) -or (-not (Test-Path -Path "build"))) {
 }
 
 Set-Location "java"
-dos2unix ./gradlew
+# dos2unix ./gradlew
 Move-Item "app/build.gradle.vscode-disabled" "app/build.gradle"
 & ./gradlew build
 if ($LASTEXITCODE -ne 0) {
